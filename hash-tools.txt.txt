@@ -27,7 +27,7 @@ style = '''\033[32m
   ..--""              `-\(\/;`
     _.                      :
                             ;`-
-                           :\  INSTAGRAM :@2knn1
+                           :\  INSTAGRAM :@2knn10
                                INSTAGRAM link : https://www.instagram.com/2knn10/
 '''
 print(style)
