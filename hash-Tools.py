@@ -1,0 +1,77 @@
+import hashlib
+import colorama
+from hashlib import *
+colorama.init(autoreset=True)
+style = '''\033[32m
+                          __
+                            .d$$b
+                          .' TO$;\
+                         /  : TP._;
+                        / _.;  :Tb|
+                       /   /   ;j$j
+                   _.-"       d$$$$
+                 .' ..       d$$$$;
+                /  /P'      d$$$$P. |\
+               /   "      .d$$$P' |\^"l
+             .'           `T$P^"""""  :
+         ._.'      _.'                ;
+      `-.-".-'-' ._.       _.-"    .-"
+    `.-" _____  ._              .-"
+   -(.g$$$$$$$b.              .'
+     ""^^T$$$P^)            .(:
+       _/  -"  /.'         /:/;
+    ._.'-'`-'  ")/         /;/;
+ `-.-"..--""   " /         /  ;
+.-" ..--""        -'          :
+..--""--.-"         (\      .-(\
+  ..--""              `-\(\/;`
+    _.                      :
+                            ;`-                           
+                           :\  
+                           {by
+                               INSTAGRAM :@2knn10
+                               INSTAGRAM link : https://www.instagram.com/2knn10/
+'''                                                                              
+print(style)
+print("================================================")
+print("1]- Hash chacker [1]\n2]- Hash length  [2]\n3]- Hash type    [3] ")
+print("4]- MD5 Encrypt  [4]\n5]- md5 Decrypt  [5] ")
+print("================================================")
+choose = input("please choose option : ") 
+if choose == '1':
+        print("This option For Hash chacher")
+        hash1 = input("Enter hash [1] : ")
+        hash2 = input("Enter hash [2] : ")
+        if hash1 == hash2 : 
+                print("the hash is clean")
+        else:
+                print("the hash is virus")
+if choose == '2' :
+        print("This optin For length hash")
+        length = input("Enter your Hash : ")
+        print("Length Hash is : ", len(length))
+if choose == '3':
+       print("This option For know Hash Type")
+       hash = input("Enter the hash : ")
+       length = len(hash)
+       if length == 32 :
+               print("The hash is [MD5]")
+       if length == 40 :
+               print("The hash is [sha1]")
+       if length == 64 :
+               print("The hash is [sha256]")       
+if choose == '4' :
+        print("This option For text to MD5")
+        word = input("Enter your text :")
+        md5  = hashlib.md5(word.encode())
+        print(md5.hexdigest())
+if choose == '5':
+        print("This option For decryption")
+        hash = input ("Enter your hash : ")
+        file = input ("Write file name : ")
+        with open(file , mode='r') as f :
+                for line in f :
+                        line = line.strip()
+                        if md5(line.encode()).hexdigest() == hash :
+                                print("[-] hash Found :" +line)
+        
