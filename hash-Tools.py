@@ -34,8 +34,8 @@ style = '''\033[32m
 '''                                                                              
 print(style)
 print("================================================")
-print("1]- Hash chacker [1]\n2]- Hash length  [2]\n3]- Hash type    [3] ")
-print("4]- MD5 Encrypt  [4]\n5]- md5 Decrypt  [5] ")
+print("[1]- Hash chacker [1]\n[2]- Hash length  [2]\n[3]- Hash type    [3] ")
+print("[4]- MD5 Encrypt  [4]\n[5]- md5 Decrypt  [5] ")
 print("================================================")
 choose = input("please choose option : ") 
 if choose == '1':
