@@ -2,7 +2,7 @@ import hashlib
 import colorama
 from hashlib import *
 colorama.init(autoreset=True)
-style = '''\033[32m
+style = '''\033[34m
                           __
                             .d$$b
                           .' TO$;\
@@ -29,14 +29,21 @@ style = '''\033[32m
                             ;`-                           
                            :\  
                            {by
-                               INSTAGRAM :@2knn10
-                               INSTAGRAM link : https://www.instagram.com/2knn10/
+
+=================================================|
+            [ + ] by kivani                      |
+=================================================|
+            [ + ] Instagram : 2knn10             |                   
+=================================================|
 '''                                                                              
 print(style)
-print("================================================")
-print(" -Hash chacker [1]\n -Hash length  [2]\n -Hash type    [3] ")
-print(" -MD5 Encrypt  [4]\n -md5 Decrypt  [5] ")
-print("================================================")
+style = '''\033[33m
+================================================
+ -Hash chacker [1]\n -Hash length  [2]\n -Hash type    [3] 
+ -MD5 Encrypt  [4]\n -md5 Decrypt  [5] 
+================================================
+'''
+print(style)
 choose = input("please choose option : ") 
 if choose == '1':
         print("This option is to match the hash type")
@@ -61,7 +68,7 @@ if choose == '3':
        if length == 64 :
                print("The hash is [ sha256 ]")       
 if choose == '4' :
-        print("Put the text you want to encrypt")
+        print("Put the text you want to encrypt")       
         word = input("Enter your text :")
         md5  = hashlib.md5(word.encode())
         print(md5.hexdigest())
