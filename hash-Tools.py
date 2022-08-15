@@ -39,7 +39,7 @@ print(" -MD5 Encrypt  [4]\n -md5 Decrypt  [5] ")
 print("================================================")
 choose = input("please choose option : ") 
 if choose == '1':
-        print("This option For Hash chacher")
+        print("This option is to match the hash type")
         hash1 = input("Enter hash [1] : ")
         hash2 = input("Enter hash [2] : ")
         if hash1 == hash2 : 
@@ -55,13 +55,13 @@ if choose == '3':
        hash = input("Enter the hash : ")
        length = len(hash)
        if length == 32 :
-               print("The hash is [MD5]")
+               print("The hash is [ MD5 ]")
        if length == 40 :
-               print("The hash is [sha1]")
+               print("The hash is [ sha1 ]")
        if length == 64 :
-               print("The hash is [sha256]")       
+               print("The hash is [ sha256 ]")       
 if choose == '4' :
-        print("This option For text to MD5")
+        print("Put the text you want to encrypt")
         word = input("Enter your text :")
         md5  = hashlib.md5(word.encode())
         print(md5.hexdigest())
