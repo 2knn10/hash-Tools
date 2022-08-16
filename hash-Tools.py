@@ -30,18 +30,18 @@ style = '''\033[34m
                            :\  
                            {by
 
-=================================================|
-            [ + ] by kivani                      |
-=================================================|
-            [ + ] Instagram : 2knn10             |                   
-=================================================|
+|=================================================|
+|            [ + ] by kivani                      |
+|=================================================|
+|            [ + ] Instagram : 2knn10             |                   
+|=================================================|
 '''                                                                              
 print(style)
 style = '''\033[33m
-================================================
+==========================================
  -Hash chacker [1]\n -Hash length  [2]\n -Hash type    [3] 
- -MD5 Encrypt  [4]\n -md5 Decrypt  [5] 
-================================================
+ -MD5 Encrypt  [4]\n -md5 Decrypt  [5]                     
+==========================================
 '''
 print(style)
 choose = input("please choose option : ") 
@@ -69,7 +69,9 @@ if choose == '3':
                print("The hash is [ sha256 ]")       
 if choose == '4' :
         print("Put the text you want to encrypt")       
+        
         word = input("Enter your text :")
+        
         md5  = hashlib.md5(word.encode())
         print(md5.hexdigest())
 if choose == '5':
